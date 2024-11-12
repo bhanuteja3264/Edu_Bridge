@@ -1,12 +1,8 @@
-import './App.css'
-import { Button } from "@/components/ui/button"
+import React from 'react'
 
 function App() {
-  return(
-    <div>
-      <h1>Hello world</h1>
-      <Button>Click you</Button>
-    </div>
+  return (
+    <div>App</div>
   )
 }
 
