@@ -1,0 +1,26 @@
+we have an Internship project, which is a web based application where we use MERN stack, basically it consists of 4 types of users(student, guides, inCharge, admin). And the basic overview of the project is, In colleges we have to do many projects and the projects should be reviewed frequently, But this review process is hectic at times students may not available or guides may not be available and also the progress need to be stored manually which is very hectic. So our project makes it online all the basic reviews will be in online between guide and students and all the changes that guides expect will be filled in table so every team mate can see them but first I will give you detailed overview of each person. 
+
+1) InCharge:
+   => He/She will first login to the website, In his account he can see his profile and also can edit it and can logout 
+   => To the left side it has a menu which consist of year(1,2,3,4) and in particular year it consists of sem(1,2) and in each sem it consists of branches(CSE, CSBS) and in each branch it consists of section(A,B,C,D,etc) 
+   => And in that particular section if the year is 1 then it will have only CBP section, if year is 2 it will have CBP & FP, if year is 3 it will have CBP & MINI, if year is 4 it will have CBP & MAJOR.
+   => For CBP, Incharge will have a sheet of all team detail and the description of projects and once he fills it every student in that sheet will be able to see it in their particular active works and for every review both student and incharge will be able to update the details of review and they will see it in review table.
+   => For FP,MINI,MAJOR. Incharge will have a sheet of all team detail and guide details and the description of projects and once he fills it every student in that sheet will be able to see it in their particular active works but guide first needs to accept on their notification section and then only they will be able to see it and for every review both student and guide will be able to update the details of review and they will see it in review table but incharge will only be able to see all the interactions between guide and student only for the final review Incharge will evaluate everything
+   =>Once project reviews& final evaluation completes this will go into completed section in his account.
+
+2) Guide:
+   => He/She will first login to the website, In his account he can see his profile and also can edit it and can logout 
+   => To the left side it has a menu which consist of year(2,3,4) and in particular year it consists of sem(1,2) and in each sem it consists of branches(CSE, CSBS) and in each branch it consists of section(A,B,C,D,etc) 
+   => if year is 2 it will have FP, if year is 3 it will have MINI, if year is 4 it will have MAJOR.
+   => When Incharge fills all the details all the guides will get the notification in their accounts and once they accept it based on details it will be active in particular section as in the menu bar
+   => Since the guides have access to the review table the table mainly consist of team ID and project name and in the table the columns are review no, date , progress, corrections to be made, presentees to that particular review, attach the files, links, etc
+   
+
+3) Student:
+   => He/She will first login to the website, In his account he can see his profile and also can edit it and can logout
+   => 
+
+   
+
+   
+   
