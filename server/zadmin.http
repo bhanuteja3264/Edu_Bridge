@@ -1,0 +1,175 @@
+### Admin Login
+POST http://localhost:1544/admin/login
+Content-Type: application/json
+
+{
+  "adminID": "admin",
+  "password": "Welcome@123"
+}
+
+### Add multiple students
+POST http://localhost:1544/admin/add-students
+Content-Type: application/json
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGE5Nzc1NzdjNjI3ZWU3OWExZDU0MyIsInJvbGUiOiJzdHVkZW50IiwiZW1haWwiOiIyMjA3MUEzMjU1QHZucnZqaWV0LmluIiwiaWF0IjoxNzQyMzkwNzQwLCJleHAiOjQzMzQzOTA3NDB9.PRSVzvhkLQmY4drCDjVcBCDqPmdPi6_MbpSMpxcTOqg
+
+{
+  "students": {
+    "22071A3265": "Ratna123"
+  }
+}
+
+### Soft delete a student
+DELETE http://localhost:1544/admin/students/22071A3262
+Content-Type: application/json
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGE5Nzc1NzdjNjI3ZWU3OWExZDU0MyIsInJvbGUiOiJzdHVkZW50IiwiZW1haWwiOiIyMjA3MUEzMjU1QHZucnZqaWV0LmluIiwiaWF0IjoxNzQyMzkwNzQwLCJleHAiOjQzMzQzOTA3NDB9.PRSVzvhkLQmY4drCDjVcBCDqPmdPi6_MbpSMpxcTOqg
+
+### List all deleted students
+GET http://localhost:1544/admin/students/deleted
+Content-Type: application/json
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGE5Nzc1NzdjNjI3ZWU3OWExZDU0MyIsInJvbGUiOiJzdHVkZW50IiwiZW1haWwiOiIyMjA3MUEzMjU1QHZucnZqaWV0LmluIiwiaWF0IjoxNzQyMzkwNzQwLCJleHAiOjQzMzQzOTA3NDB9.PRSVzvhkLQmY4drCDjVcBCDqPmdPi6_MbpSMpxcTOqg
+
+### Restore a deleted student
+POST http://localhost:1544/admin/students/22071A3262/restore
+Content-Type: application/json
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGE5Nzc1NzdjNjI3ZWU3OWExZDU0MyIsInJvbGUiOiJzdHVkZW50IiwiZW1haWwiOiIyMjA3MUEzMjU1QHZucnZqaWV0LmluIiwiaWF0IjoxNzQyMzkwNzQwLCJleHAiOjQzMzQzOTA3NDB9.PRSVzvhkLQmY4drCDjVcBCDqPmdPi6_MbpSMpxcTOqg
+
+### List all active students
+GET http://localhost:1544/admin/students
+Content-Type: application/json
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDdkNGE1ZDQ0Y2FkNWUxZTQyODI0YSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0MjgxMDY3OCwiZXhwIjoyMDAyMDEwNjc4fQ.BZTNt6kLN2EadrATZE6ZX-i_GAvwomWcMVn2UiHDRYQ
+
+### Get a specific student's details
+GET http://localhost:1544/admin/students/22071A3262
+Content-Type: application/json
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDdkNGE1ZDQ0Y2FkNWUxZTQyODI0YSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0MjMyMDA5MCwiZXhwIjoxNzQyNDA2NDkwfQ.OhR4CCtCcSDoPGBIHGuWQL9JW-BXfDgW6p3l3UxBWL8
+
+
+### Update a student
+PUT http://localhost:1544/admin/students/22071A3262
+Content-Type: application/json
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGE5Nzc1NzdjNjI3ZWU3OWExZDU0MyIsInJvbGUiOiJzdHVkZW50IiwiZW1haWwiOiIyMjA3MUEzMjU1QHZucnZqaWV0LmluIiwiaWF0IjoxNzQyMzkwNzQwLCJleHAiOjQzMzQzOTA3NDB9.PRSVzvhkLQmY4drCDjVcBCDqPmdPi6_MbpSMpxcTOqg
+
+
+{
+  "name": "Ratna Jashwanth",
+  "department": "CSBS",
+  "batch": "2022-2026"
+}
+
+
+
+
+
+
+
+
+
+
+
+### Add faculty members
+POST http://localhost:1544/admin/add-faculty
+Content-Type: application/json
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGE5Nzc1NzdjNjI3ZWU3OWExZDU0MyIsInJvbGUiOiJzdHVkZW50IiwiZW1haWwiOiIyMjA3MUEzMjU1QHZucnZqaWV0LmluIiwiaWF0IjoxNzQyMzkwNzQwLCJleHAiOjQzMzQzOTA3NDB9.PRSVzvhkLQmY4drCDjVcBCDqPmdPi6_MbpSMpxcTOqg
+
+{
+  "faculties": {
+    "FAC596w35": "Mark"
+  }
+}
+
+### List all faculty members (complete details by default)
+GET http://localhost:1544/admin/faculty
+Content-Type: application/json
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGE5Nzc1NzdjNjI3ZWU3OWExZDU0MyIsInJvbGUiOiJzdHVkZW50IiwiZW1haWwiOiIyMjA3MUEzMjU1QHZucnZqaWV0LmluIiwiaWF0IjoxNzQyMzkwNzQwLCJleHAiOjQzMzQzOTA3NDB9.PRSVzvhkLQmY4drCDjVcBCDqPmdPi6_MbpSMpxcTOqg
+
+
+### Get faculty details
+GET http://localhost:1544/admin/faculty/FAC12346
+Content-Type: application/json
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGE5Nzc1NzdjNjI3ZWU3OWExZDU0MyIsInJvbGUiOiJzdHVkZW50IiwiZW1haWwiOiIyMjA3MUEzMjU1QHZucnZqaWV0LmluIiwiaWF0IjoxNzQyMzkwNzQwLCJleHAiOjQzMzQzOTA3NDB9.PRSVzvhkLQmY4drCDjVcBCDqPmdPi6_MbpSMpxcTOqg
+
+
+### Update faculty
+PUT http://localhost:1544/admin/faculty/FAC12346
+Content-Type: application/json
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGE5Nzc1NzdjNjI3ZWU3OWExZDU0MyIsInJvbGUiOiJzdHVkZW50IiwiZW1haWwiOiIyMjA3MUEzMjU1QHZucnZqaWV0LmluIiwiaWF0IjoxNzQyMzkwNzQwLCJleHAiOjQzMzQzOTA3NDB9.PRSVzvhkLQmY4drCDjVcBCDqPmdPi6_MbpSMpxcTOqg
+
+
+{
+  "qualification": "Ph.D in Computer Science",
+  "googleScholarID": "scholar123",
+  "workLocation": "Main Campus",
+  "employmentType": "Permanent"
+}
+
+### Try to soft delete an already deleted faculty
+DELETE http://localhost:1544/admin/faculty/FAC12346
+Content-Type: application/json
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGE5Nzc1NzdjNjI3ZWU3OWExZDU0MyIsInJvbGUiOiJzdHVkZW50IiwiZW1haWwiOiIyMjA3MUEzMjU1QHZucnZqaWV0LmluIiwiaWF0IjoxNzQyMzkwNzQwLCJleHAiOjQzMzQzOTA3NDB9.PRSVzvhkLQmY4drCDjVcBCDqPmdPi6_MbpSMpxcTOqg
+
+### List deleted faculty
+GET http://localhost:1544/admin/faculty/deleted
+Content-Type: application/json
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGE5Nzc1NzdjNjI3ZWU3OWExZDU0MyIsInJvbGUiOiJzdHVkZW50IiwiZW1haWwiOiIyMjA3MUEzMjU1QHZucnZqaWV0LmluIiwiaWF0IjoxNzQyMzkwNzQwLCJleHAiOjQzMzQzOTA3NDB9.PRSVzvhkLQmY4drCDjVcBCDqPmdPi6_MbpSMpxcTOqg
+
+### Restore faculty
+POST http://localhost:1544/admin/faculty/FAC12346/restore
+Content-Type: application/json
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZGE5Nzc1NzdjNjI3ZWU3OWExZDU0MyIsInJvbGUiOiJzdHVkZW50IiwiZW1haWwiOiIyMjA3MUEzMjU1QHZucnZqaWV0LmluIiwiaWF0IjoxNzQyMzkwNzQwLCJleHAiOjQzMzQzOTA3NDB9.PRSVzvhkLQmY4drCDjVcBCDqPmdPi6_MbpSMpxcTOqg
+
+### Get Dashboard Statistics
+GET http://localhost:1544/admin/dashboard-stats
+Content-Type: application/json
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDdkNGE1ZDQ0Y2FkNWUxZTQyODI0YSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0MjgxMDY3OCwiZXhwIjoyMDAyMDEwNjc4fQ.BZTNt6kLN2EadrATZE6ZX-i_GAvwomWcMVn2UiHDRYQ
+
+### Bulk Update Students
+POST http://localhost:1544/admin/bulk-update-students
+Content-Type: application/json
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDdkNGE1ZDQ0Y2FkNWUxZTQyODI0YSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0MjgxMDY3OCwiZXhwIjoyMDAyMDEwNjc4fQ.BZTNt6kLN2EadrATZE6ZX-i_GAvwomWcMVn2UiHDRYQ
+
+{
+  "students": [
+    {
+      "studentID": "22071A3255",
+      "name": "Updated Student Name",
+      "department": "CSBS",
+      "batch": "2022-2026",
+      "phone": "9876543210",
+      "gender": "Male"
+    },
+    {
+      "studentID": "22071A3262",
+      "name": "Another Updated Name",
+      "department": "CSE",
+      "batch": "2022-2026",
+      "phone": "9876543211",
+      "linkedInURL": "https://linkedin.com/in/updated-profile"
+    }
+  ]
+}
+
+### Bulk Update Faculty
+POST http://localhost:1544/admin/bulk-update-faculty
+Content-Type: application/json
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDdkNGE1ZDQ0Y2FkNWUxZTQyODI0YSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0MjgxMDY3OCwiZXhwIjoyMDAyMDEwNjc4fQ.BZTNt6kLN2EadrATZE6ZX-i_GAvwomWcMVn2UiHDRYQ
+
+{
+  "faculty": [
+    {
+      "facultyID": "00CSE007",
+      "name": "Updated Faculty Name",
+      "department": "Computer Science",
+      "designation": "Associate Professor",
+      "qualification": "Ph.D in Computer Science",
+      "email": "faculty1@example.com"
+    },
+    {
+      "facultyID": "FAC12346",
+      "department": "Information Technology",
+      "designation": "Professor",
+      "qualification": "Ph.D in Data Science",
+      "email": "faculty2@example.com",
+      "phoneNumber": "9876543212"
+    }
+  ]
+}
