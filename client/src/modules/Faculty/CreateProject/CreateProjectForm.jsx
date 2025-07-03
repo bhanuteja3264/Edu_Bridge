@@ -7,7 +7,6 @@ import { CREATE_TEAMS_ROUTE } from "@/utils/constants";
 import { apiClient } from "@/lib/api-client";
 import { toast } from "react-hot-toast";
 import { useStore } from "@/store/useStore";
-import { Loader2 } from "lucide-react";
 
 const CreateProjectForm = () => {
   const navigate = useNavigate();
