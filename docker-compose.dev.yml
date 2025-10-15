@@ -1,0 +1,69 @@
+version: '3.8'
+
+services:
+  # MongoDB Database
+  mongodb:
+    image: mongo:6
+    container_name: edubridge-mongodb-dev
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin123
+      MONGO_INITDB_DATABASE: edubridge
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_dev_data:/data/db
+    networks:
+      - edubridge-dev-network
+
+  # Backend Server (Development with Hot Reload)
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server.dev
+    container_name: edubridge-server-dev
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      NODE_ENV: development
+      PORT: 5000
+      MONGODB_URI: mongodb://admin:admin123@mongodb:27017/edubridge?authSource=admin
+      JWT_SECRET: dev-secret-key
+    depends_on:
+      - mongodb
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+    command: npm run dev
+    networks:
+      - edubridge-dev-network
+
+  # Frontend Client (Development with Hot Reload)
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile.client.dev
+    container_name: edubridge-client-dev
+    restart: unless-stopped
+    ports:
+      - "5173:5173"
+    environment:
+      NODE_ENV: development
+      VITE_API_URL: http://localhost:5000
+    depends_on:
+      - server
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    command: npm run dev
+    networks:
+      - edubridge-dev-network
+
+networks:
+  edubridge-dev-network:
+    driver: bridge
+
+volumes:
+  mongodb_dev_data:
